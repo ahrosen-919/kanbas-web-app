@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- Grades page of Kanbas -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td valign="top">
+                <!-- Kanbas Navigation -->
+                <ul>
+                    <li><a href = "#">Account</a></li>
+                    <li><a href = "#">Dashboard</a></li>
+                    <li><a href = "courses.html">Courses</a></li>
+                    <li><a href = "#">Calendar</a></li>
+                    <li><a href = "#">Inbox</a></li>
+                    <li><a href = "#">History</a></li>
+                    <li><a href = "#">Studio</a></li>
+                    <li><a href = "#">Commons</a></li>
+                    <li><a href = "#">Help</a></li>
+                </ul>
+            </td>
+
+            <td valign="top">
+                <!-- Course Navigation -->
+                <ul>
+                    <li><a href = "courseHome.html">Home</a></li>
+                    <li><a href = "#">Modules</a></li>
+                    <li><a href = "#">Piazza</a></li>
+                    <li><a href = "#">Zoom Meetings</a></li>
+                    <li><a href = "#">Assignments</a></li>
+                    <li><a href = "#">Quizzes</a></li>
+                    <li><a href = "grades.html">Grades</a></li>
+                    <li><a href = "#">People</a></li>
+                    <li><a href = "#">Panopto Video</a></li>
+                    <li><a href = "#">Discussions</a></li>
+                    <li><a href = "#">Announcements</a></li>
+                    <li><a href = "#">Pages</a></li>
+                    <li><a href = "#">Files</a></li>
+                    <li><a href = "#">Rubrics</a></li>
+                    <li><a href = "#">Outcomes</a></li>
+                    <li><a href = "#">Collaborations</a></li>
+                    <li><a href = "#">Syllabus</a></li>
+                    <li><a href = "#">Settings</a></li>
+                </ul>
+            </td>
+
+            <td valign="top">
+                <!-- Course Content -->
+                <div>
+                    <select id="select-one-option">
+                        <option value="GRADEBOOK">Gradebook</option>
+                    </select>
+
+                    <button type="button">Import</button>
+
+                    <select id="select-export">
+                        <option value="EXPORT">Export</option>
+                    </select>
+
+                    <button type="button">Configure</button>
+                </div>
+
+                <div>
+                    <h4>Student Names</h4>
+                    <input id="text-fields-students" placeholder="Search Students"/>
+                </div>
+
+                <div>
+                    <h4>Assignment Names</h4>
+                    <input id="text-fields-assignments" placeholder="Search Assignments"/>
+                </div>
+                <br/>
+                <div>
+                    <button type="button">Apply Filters</button>
+                </div>
+                <br/>
+
+                <table width="100%" border="1">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>
+                                A1 SETUP<br/>
+                                Out of 100
+                            </th>
+
+                            <th>
+                                A2 HTML<br/>
+                                Out of 100
+                            </th>
+
+                            <th>
+                                A3 CSS<br/>
+                                Out of 100
+                            </th>
+
+                            <th>
+                                A4 BOOTSTRAP<br/>
+                                Out of 100
+                            </th>
+
+                            <th>
+                                A5 JAVASCRIPT<br/>
+                                Out of 100
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alice Wonderland</td>
+                            <td valign="center" align="center">98</td>
+                            <td valign="center" align="center">89</td>
+                            <td valign="center" align="center"><input id = "alice-a3" placeholder="100"></td>
+                            <td valign="center" align="center">90</td>
+                            <td valign="center" align="center">92</td>
+                        </tr>
+
+                        <tr>
+                            <td>Princess Leia</td>
+                            <td valign="center" align="center">98</td>
+                            <td valign="center" align="center"><input id = "leia-a2" placeholder="100"></td>
+                            <td valign="center" align="center"><input id = "leia-a3" placeholder="100"></td>
+                            <td valign="center" align="center">96</td>
+                            <td valign="center" align="center"><input id = "leia-a5" placeholder="100"></td>
+                        </tr>
+
+                        <tr>
+                            <td valign="center">Luke Skywalker</td>
+                            <td valign="center" align="center">88</td>
+                            <td valign="center" align="center"><input id = "luke-a3" placeholder="100"></td>
+                            <td valign="center" align="center">69</td>
+                            <td valign="center" align="center">91</td>
+                            <td valign="center" align="center"><input id = "luke-a5" placeholder="100"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Han Solo</td>
+                            <td valign="center" align="center"><input id = "han-a1" placeholder="100"></td>
+                            <td valign="center" align="center">89</td>
+                            <td valign="center" align="center"><input id = "han-a3" placeholder="100"></td>
+                            <td valign="center" align="center">67</td>
+                            <td valign="center" align="center">72</td>
+                        </tr>
+
+                        <tr>
+                            <td>Yoda</td>
+                            <td valign="center" align="center">98</td>
+                            <td valign="center" align="center">99</td>
+                            <td valign="center" align="center">99</td>
+                            <td valign="center" align="center">100</td>
+                            <td valign="center" align="center"><input id = "yoda-a3" placeholder="100"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
