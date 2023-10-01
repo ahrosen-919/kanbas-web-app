@@ -1,0 +1,290 @@
+.row {
+    margin:0 !important;
+}
+.container-fluid {
+    padding:0 !important;
+    margin:0;
+    height: 100%;
+    width:100%;
+}
+
+
+#wd-nav-bar {
+    max-width: 80px;
+    min-width: 75px;
+    /* float: left; */
+    margin:0;
+    height:100vh;
+    /* position:fixed; */
+    background-color: black;
+    width:100%;
+    min-height:max(100vh, 605px);
+    margin:0;
+    padding: 5px 0px;
+}
+
+
+
+
+.wd-active-nav>.wd-nav-item {
+    background-color: white;
+}
+
+.wd-nav-item-box {
+    text-decoration: none;
+}
+
+.wd-nav-item-box .wd-nav-title {
+    color: white;
+    font-size: 9pt;
+    text-decoration: none;
+    text-align: center;
+}
+
+.wd-nav-item-box>.wd-nav-item {
+    height: 60px;
+    padding: 5px;
+    /* display: flex;
+    justify-content: center;; */
+}
+
+.wd-nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.wd-nav-icon i {
+    max-width:80px;
+    color:rgb(202,25,42);
+    padding-bottom: 5px;
+}
+
+.fa-user#wd-account-icon{
+    color: gray;
+}
+
+
+.fa-circle#wd-account-icon{
+    color: white;
+}
+
+.wd-active-nav #wd-account-icon {
+    color: gray;
+}
+
+.fa-question#wd-help-icon {
+    font-size: 10pt;
+}
+
+
+
+#wd-nav-neu-logo {
+    object-fit:contain;
+    max-width:60px;
+}
+
+.wd-active-nav .wd-nav-title {
+    color: rgb(202,25,42);
+}
+
+#wd-nav-list {
+    padding:0 !important;
+    margin:0 !important;
+}
+
+#wd-nav-list li {
+    list-style: none;
+    padding:auto;
+    margin:0;
+}
+
+#wd-sub-nav-list {
+    list-style: none;
+    padding:0;
+    width: 170px;
+}
+
+#wd-sub-nav-list>li {
+    min-height: 30px;
+    padding: 2px;
+    margin:3px;
+    font-size: 10pt;
+    text-decoration:none; 
+}
+
+.wd-sub-item {
+    font-size: 10pt;
+    text-decoration:none; 
+    color:rgb(202,25,42);
+}
+
+#wd-sub-nav {
+    padding:0 10px;
+    display:flex;
+    flex-wrap:wrap;
+    width:190px;
+    flex: 0 0 190px;
+    /* max-width: 200px; */
+}
+
+#wd-cancel-edit {
+    flex: 0 0 150px;
+}
+
+.wd-profile-image {
+    font-size: 40pt;
+    color:gray;
+    margin-bottom:10px;
+}
+
+#wd-sub-nav-list>li>a {
+    text-decoration:none; 
+}
+
+#wd-page-header .fa-bars {
+    color: rgb(202,25,42);
+    font-size:12pt;
+    margin-right: 15px;
+}
+
+#wd-page-header {
+    min-height: 40px;
+    padding-top: 15px;
+}
+
+.wd-page-title-med {
+    font-size: 11pt;
+}
+
+.wd-page-title-large {
+    font-size: 20pt;
+}
+
+.wd-page-title-red {
+    color: rgb(202,25,42);
+}
+
+#wd-page-header hr {
+    margin: 15px 0;
+    color:gray;
+}
+
+#wd-page-contents {
+    padding:0 10px;
+}
+
+.big {
+    height: 800px;
+}
+
+#wd-sub-nav-list .active {
+    border-left: 2px solid black;
+    padding-left: 3px;
+    margin-left:0;
+}
+
+.active .wd-sub-item {
+    color:black;
+}
+
+.wd-profile-content {
+    display:flex;
+    flex-direction:column;
+    justify-content: left !important;
+    flex: auto !important;
+}
+
+.wd-profile-name {
+    font-size:15pt;
+    margin:10px 0;
+}
+
+.wd-subheading {
+    font-size: 14pt;
+    margin-top: 15px;
+}
+
+.wd-paragraph {
+    font-size: 11pt;
+}
+
+.wd-paragraph>a {
+    color:rgb(202,25,42);
+    text-decoration: none;
+}
+
+.wd-paragraph>.fa-link {
+    color: gray;
+    font-size: 8pt;
+    margin-right: 2px;
+}
+
+.wd-paragraph .fa-external-link-alt {
+    font-size: 8pt;
+}
+
+#wd-edit-profile>i {
+    margin-right: 6px;
+    font-size:9pt;
+}
+
+#wd-edit-profile {
+    font-size:10pt;
+}
+
+.wd-sub-subheading {
+    font-size: 11pt;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#wd-profile-title, #wd-profile-bio {
+    font-size: 10pt;
+}
+
+.wd-profile-edit-section {
+    margin-bottom: 20px;
+}
+
+.flex-fixed-width-item {
+    flex: 0 0 100px;
+}
+
+.wd-link-editing {
+    display:flex;
+    flex-wrap:wrap;
+    flex-shrink: 0;
+    width:100%;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.wd-link-title-col, .wd-link-url-col {
+    display:flex;
+    flex-direction: column;
+}
+
+.wd-inline-link {
+    display:flex;
+    align-items: center;
+}
+
+.wd-inline-link i {
+    margin: 0 10px;
+}
+
+.wd-inline-link .fa-times {
+    color:rgb(202,25,42);
+}
+
+.wd-edit-prof-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.wd-edit-prof-buttons>.btn {
+    margin:0 10px;
+}

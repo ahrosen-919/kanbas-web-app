@@ -1,110 +1,237 @@
 <!DOCTYPE html>
-<!-- Edit profile page of Kanbas -->
+<!-- Edit Profile page of Kanbas -->
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Profile</title>
+    <title>Edit Profile</title>
+    <!-- Link Stylesheet -->
+    <link href="../index.css" rel="stylesheet"/>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Local dependency version: -->
+    <!-- <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/> -->
+
+    <!-- Fontawesome CDN-->
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+
+    <!-- Local dependency version: -->
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
 </head>
 <body>
-    <table width="100%">
-        <tr>
-            <td valign="top">
-                <!-- Kanbas Navigation -->
-                <ul>
-                    <li><a href = "../account.html">Account</a></li>
-                    <li><a href = "#">Dashboard</a></li>
-                    <li><a href = "../courses.html">Courses</a></li>
-                    <li><a href = "#">Calendar</a></li>
-                    <li><a href = "#">Inbox</a></li>
-                    <li><a href = "#">History</a></li>
-                    <li><a href = "#">Studio</a></li>
-                    <li><a href = "#">Commons</a></li>
-                    <li><a href = "#">Help</a></li>
+    <div class = "container-fluid">
+        <!-- Global Navigation -->
+        <div class="row">
+            <div class="col sticky-top" id = "wd-nav-bar">
+                <ul id="wd-nav-list">
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <img src="../../images/neu-logo-white-text.png" id="wd-nav-neu-logo">
+                            </div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "index.html" class="wd-nav-item-box wd-active-nav">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                                <span class="fa-stack fa-1x">
+                                    <i class="far fa-circle fa-stack-2x" id="wd-account-icon"></i>
+                                    <i class="fa fa-user fa-stack-1x" id="wd-account-icon"></i>
+                                </span>
+                            </div>
+                            <div class="wd-nav-title">Account</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "../dashboard.html" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span> <i class="fas fa-tachometer-alt fa-flip-horizontal fa-lg" id="wd-dashboard-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Dashboard</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "../courses.html" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span> <i class="fas fa-book fa-lg" id="wd-courses-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Courses</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span><i class="far fa-calendar-alt fa-lg" id="wd-calendar-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Calendar</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span><i class="fas fa-envelope-open-text fa-lg" id="wd-inbox-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Inbox</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span><i class="far fa-clock fa-lg" id="wd-history-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">History</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span> <i class="fas fa-tv fa-lg" id="wd-studio-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Studio</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span class="fa-stack fa-1x">
+                                <i class="far fa-circle fa-stack-2x" id="wd-commons-icon"></i>
+                                <i class="fas fa-long-arrow-alt-right fa-stack-1x" id="wd-commons-icon"></i>
+                            </span>
+                            </div>
+                            <div class="wd-nav-title">Commons</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span class="fa-stack fa-1x">
+                                <i class="far fa-circle fa-stack-2x" id="wd-help-icon"></i>
+                                <i class="fas fa-question fa-stack-1x" id="wd-help-icon"></i>
+                            </span>
+                            </div>
+                            <div class="wd-nav-title">Help</div>
+                        </div>
+                    </a></li>
+
                 </ul>
-            </td>
+            </div>
 
-            <td valign="top">
-                <!-- Account Navigation -->
-                <ul>
-                    <li><a href = "#">Notifications</a></li>
-                    <li><a href = "index.html">Profile</a></li>
-                    <li><a href = "#">Files</a></li>
-                    <li><a href = "#">Settings</a></li>
-                    <li><a href = "#">ePortfolios</a></li>
-                    <li><a href = "#">Shared Content</a></li>
-                    <li><a href = "#">The Hub</a></li>
-                    <li><a href = "#">Qwickly Course Tools</a></li>
-                    <li><a href = "#">Global Announcements</a></li>
-                </ul>
-
-            <td valign="top">
-                <!-- Profile Content -->
-                <h2>Aidan Rosenberg</h2>
-                <form id="edit-profile-form" action="index.html">
-                    <div>
-                        <label for="edit-profile-edit-name">Name:*</label>
-                        <input id="edit-profile-edit-name" value="Aidan Rosenberg">
-                        <label for="edit-profile-pronouns">Pronouns:</label>
-                        <select id="edit-profile-pronouns">
-                            <option>None</option>
-                            <option selected>He/Him</option>
-                            <option>She/Her</option>
-                            <option>They/Them</option>
-                        </select>
-                    </div><br/>
-
-                    <div>
-                        <label for="edit-profile-edit-title">Title:</label>
-                        <input id="edit-profile-edit-title">
+            <!-- Account Navigation -->
+            <div class="col" id="wd-page-contents">
+                <div class="container-fluid">
+                    <div class="row" id="wd-page-header">
+                        <div class="col">
+                            <span><i class="fas fa-bars"></i></span>
+                            <span class="wd-page-title-med">Jose Annunziato's Profile</span>
+                            <hr/>
+                        </div>
                     </div>
+                    <div class="row flex-nowrap">
+                        <div class="col sticky-top" id="wd-sub-nav">
+                            <ul id="wd-sub-nav-list">
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Notifications</div></a>
+                                </li>
+                                <li class="active"><a href = "index.html">
+                                    <div class="wd-sub-item">Profile</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Files</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Settings</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">ePortfolios</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Shared Content</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">The Hub</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Qwickly Course Tools</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Global Announcements</div></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-md-auto wd-profile-content">
+                            <div class = "wd-profile-image">
+                                <span><i class="fa fa-user fa-lg" aria-hidden="true"></i></span>
+                            </div>
 
-                    <div>
-                        <h4>Contact</h4>
-                        <p>No registered services, you can add some on the <a href="https://google.com">settings</a> page.</p>
+                            <div class="form-group wd-profile-edit-section">
+                                <label for="wd-profile-name" class="wd-sub-subheading">Name:*</label>
+                                <input class="form-control form-control-sm" type="text"
+                                id="wd-profile-name" placeholder="Name"
+                                value="Jose Annunziato">
+                            
+                                <label for="wd-profile-pronouns" class="wd-sub-subheading">Pronouns:</label>
+                                <select class="form-select form-select-sm" id="wd-profile-pronous"aria-label="Default select example">
+                                    <option selected>None</option>
+                                    <option value="HEHIM">He/Him</option>
+                                    <option value="SHEHER">She/Her</option>
+                                    <option value="THEYTHEM">They/Them</option>
+                                </select>
+                           
+                                <label for="wd-profile-title" class="wd-sub-subheading">Title:</label>
+                                <textarea class="form-control" id="wd-profile-title" rows="2"></textarea>
+                            
+
+                                <h3 class="wd-subheading">Contact</h3>
+
+                                <p class="wd-paragraph">No registered services, you can add some on the <a href = '#'>settings</a> page.</p>
+
+                                <h3 class="wd-subheading">Biography</h3>
+                                <textarea class="form-control" id="wd-profile-bio" rows="6">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                           
+                                <h3 class="wd-subheading">Links</h3>
+                                <div class="wd-link-editing">
+                                    <div class="wd-link-title-col">
+                                        <label class="wd-sub-subheading" for="wd-profile-link-title">Link</label>
+                                        <div class="wd-inline-link">
+                                            <input class="form-control form-control-sm" type="text" id="wd-profile-link-title" placeholder="Link Title" value="YouTube">
+
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="wd-link-url-col">
+                                        <label class="wd-sub-subheading" for="wd-profile-link-url">URL</label>
+                                        <div class="wd-inline-link">
+                                             <input class="form-control form-control-sm" type="text" id="wd-profile-link-url" placeholder="URL"
+                                             value="https://www.youtube.com/@WebDevTV/videos">
+                                            <i class="fas fa-times"></i></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-light btn-sm">Add another link</button>
+                                <hr/>
+                                <div class="wd-edit-prof-buttons">
+                                    <a class="btn btn-light btn-sm" href="index.html" role="button">Cancel</a>
+                                    <a class="btn btn-danger btn-sm" href="index.html" role="button" type="submit">Submit</a>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="col" id="wd-cancel-edit">
+                            <a class="btn btn-outline-secondary btn-sm" id="wd-edit-profile" href="index.html" role="button"> <i class="fas fa-pencil-alt fa-flip-horizontal"></i>Cancel Editing</a>
+                        </div>
                     </div>
-
-                    <div>
-                        <h4>Biography</h4>
-                        <p>Student majoring in Computer Science & Media Arts</p>
-                        <textarea cols="50" rows="5">Student majoring in Computer Science & Media Arts</textarea>
-                    </div>
-
-                    <div>
-                        <h4>Links</h4>
-                        <ul>
-                            <li><a href="https://google.com">Google</a> Links to an external site.</li>
-                        </ul>
-
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td valign="top">
-                                        <h5 align="center">Title</h5>
-                                        <input value="Google">
-                                    </td>
-                                    <td valign="bottom">
-                                        <span>--></span>
-                                    </td>
-                                    <td valign="top">
-                                        <h5 align="center">URL</h5>
-                                        <input value="https://google.com">
-                                    </td>
-                                    <td valign="bottom">
-                                        <a href="#">Remove</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button type="button">Add another link</button> <br/>
-                        <button>Cancel</button>
-                        <button>Save Profile</button><br/>
-                        <button type="button">Edit Profile</button>
-                        <button>Cancel Editing</button>
-                    </div>
-                </form>
-
-            </td>
-        </tr>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>   
 </body>
 </html>
