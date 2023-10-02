@@ -199,34 +199,42 @@
                                 <textarea class="form-control" id="wd-profile-bio" rows="6">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
                            
                                 <h3 class="wd-subheading">Links</h3>
-                                <div class="wd-link-editing">
-                                    <div class="wd-link-title-col">
-                                        <label class="wd-sub-subheading" for="wd-profile-link-title">Link</label>
-                                        <div class="wd-inline-link">
+                                <div class="wd-link-editing container">
+                                    <div class="row w-100">
+                                        <div class="col">
+                                            <label class="wd-sub-subheading" for="wd-profile-link-title">Link</label>
+                                        </div>
+                                        <div class="col">
+                                            <label class="wd-sub-subheading" for="wd-profile-link-url">URL</label>
+                                        </div>
+                                    </div>
+                                    <div class="row w-100">
+                                        <div class="col d-flex justify-content-center wd-inline-link align-items-center">
                                             <input class="form-control form-control-sm" type="text" id="wd-profile-link-title" placeholder="Link Title" value="YouTube">
+                                            <i class="fas fa-long-arrow-alt-right side-margin-10"></i>
+                                        </div>
 
-                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        <div class="col d-flex justify-content-center align-items-center">
+                                            <input class="form-control form-control-sm" type="text" id="wd-profile-link-url" placeholder="URL" value="https://www.youtube.com/@WebDevTV/videos">
+                                            <i class="fas fa-times side-margin-10 color-red"></i>
                                         </div>
                                     </div>
-                                    <div class="wd-link-url-col">
-                                        <label class="wd-sub-subheading" for="wd-profile-link-url">URL</label>
-                                        <div class="wd-inline-link">
-                                             <input class="form-control form-control-sm" type="text" id="wd-profile-link-url" placeholder="URL"
-                                             value="https://www.youtube.com/@WebDevTV/videos">
-                                            <i class="fas fa-times"></i></i>
+                                    <div class="row w-100">
+                                        <div class="col">
+                                            <button type="button" class="btn btn-light btn-sm">Add another link</button>
                                         </div>
-                                    </div>
+                                    </div>  
                                 </div>
-                                <button type="button" class="btn btn-light btn-sm">Add another link</button>
+                                
                                 <hr/>
-                                <div class="wd-edit-prof-buttons">
-                                    <a class="btn btn-light btn-sm" href="index.html" role="button">Cancel</a>
-                                    <a class="btn btn-danger btn-sm" href="index.html" role="button" type="submit">Submit</a>
+                                <div class="d-flex justify-content-center">
+                                    <a class="btn btn-light btn-sm wd-side-margin-10" href="index.html" role="button">Cancel</a>
+                                    <a class="btn btn-danger btn-sm wd-side-margin-10" href="index.html" role="button" type="submit">Save Profile</a>
                                  </div>
                             </div>
                         </div>
                         <div class="col" id="wd-cancel-edit">
-                            <a class="btn btn-outline-secondary btn-sm" id="wd-edit-profile" href="index.html" role="button"> <i class="fas fa-pencil-alt fa-flip-horizontal"></i>Cancel Editing</a>
+                            <a class="btn btn-outline-secondary btn-sm float-end" id="wd-edit-profile" href="index.html" role="button"> <i class="fas fa-pencil-alt fa-flip-horizontal"></i>Cancel Editing</a>
                         </div>
                     </div>
                 </div>

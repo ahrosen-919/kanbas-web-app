@@ -1,117 +1,297 @@
 <!DOCTYPE html>
-<!-- Course Home page of Kanbas -->
+<!-- Home page of Kanbas -->
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Course Home</title>
+    <title>Home</title>
+    <!-- Link Stylesheet -->
+    <link href="index.css" rel="stylesheet"/>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Local dependency version: -->
+    <!-- <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/> -->
+
+    <!-- Fontawesome CDN-->
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+
+    <!-- Local dependency version: -->
+    <link href="../vendors/fontawesome/css/all.css" rel="stylesheet"/>
 </head>
 <body>
-    <table width="100%">
-        <tr>
-            <td valign="top">
-                <!-- Kanbas Navigation -->
-                <ul>
-                    <li><a href = "account.html">Account</a></li>
-                    <li><a href = "#">Dashboard</a></li>
-                    <li><a href = "courses.html">Courses</a></li>
-                    <li><a href = "#">Calendar</a></li>
-                    <li><a href = "#">Inbox</a></li>
-                    <li><a href = "#">History</a></li>
-                    <li><a href = "#">Studio</a></li>
-                    <li><a href = "#">Commons</a></li>
-                    <li><a href = "#">Help</a></li>
-                </ul>
-            </td>
+    <div class = "container-fluid">
+        <!-- Global Navigation -->
+        <div class="row">
+            <div class="col sticky-top" id = "wd-nav-bar">
+                <ul id="wd-nav-list">
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <img src="../images/neu-logo-white-text.png" id="wd-nav-neu-logo">
+                            </div>
+                        </div>
+                    </a></li>
 
-            <td valign="top">
-                <!-- Course Navigation -->
-                <ul>
-                    <li><a href = "home.html">Home</a></li>
-                    <li><a href = "#">Modules</a></li>
-                    <li><a href = "#">Piazza</a></li>
-                    <li><a href = "#">Zoom Meetings</a></li>
-                    <li><a href = "assignments/index.html">Assignments</a></li>
-                    <li><a href = "#">Quizzes</a></li>
-                    <li><a href = "grades.html">Grades</a></li>
-                    <li><a href = "#">People</a></li>
-                    <li><a href = "#">Panopto Video</a></li>
-                    <li><a href = "#">Discussions</a></li>
-                    <li><a href = "#">Announcements</a></li>
-                    <li><a href = "#">Pages</a></li>
-                    <li><a href = "#">Files</a></li>
-                    <li><a href = "#">Rubrics</a></li>
-                    <li><a href = "#">Outcomes</a></li>
-                    <li><a href = "#">Collaborations</a></li>
-                    <li><a href = "#">Syllabus</a></li>
-                    <li><a href = "#">Settings</a></li>
-                </ul>
-            </td>
+                    <li><a href = "profole/index.html" class="wd-nav-item-box ">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                                <span class="fa-stack fa-1x">
+                                    <i class="far fa-circle fa-stack-2x" id="wd-account-icon"></i>
+                                    <i class="fa fa-user fa-stack-1x" id="wd-account-icon"></i>
+                                </span>
+                            </div>
+                            <div class="wd-nav-title">Account</div>
+                        </div>
+                    </a></li>
 
-            <td valign="top">
-                <!-- Course Content -->
-                <div>
-                    <button type="button">Collapse All</button>
-                    <button type="button">View Progress</button>
-                    <select id="home-select-publish">
-                        <option value="PUBLISHALL">Publish All</option>
-                    </select>
-                    <button type="button">Module</button>
+                    <li><a href = "dashboard.html" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span> <i class="fas fa-tachometer-alt fa-flip-horizontal fa-lg" id="wd-dashboard-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Dashboard</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "courses.html" class="wd-nav-item-box wd-active-nav">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span> <i class="fas fa-book fa-lg" id="wd-courses-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Courses</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span><i class="far fa-calendar-alt fa-lg" id="wd-calendar-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Calendar</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span><i class="fas fa-envelope-open-text fa-lg" id="wd-inbox-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Inbox</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span><i class="far fa-clock fa-lg" id="wd-history-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">History</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span> <i class="fas fa-tv fa-lg" id="wd-studio-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Studio</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span class="fa-stack fa-1x">
+                                <i class="far fa-circle fa-stack-2x" id="wd-commons-icon"></i>
+                                <i class="fas fa-long-arrow-alt-right fa-stack-1x" id="wd-commons-icon"></i>
+                            </span>
+                            </div>
+                            <div class="wd-nav-title">Commons</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span class="fa-stack fa-1x">
+                                <i class="far fa-circle fa-stack-2x" id="wd-help-icon"></i>
+                                <i class="fas fa-question fa-stack-1x" id="wd-help-icon"></i>
+                            </span>
+                            </div>
+                            <div class="wd-nav-title">Help</div>
+                        </div>
+                    </a></li>
+
+                </ul>
+            </div>
+
+            <!-- Courses Navigation -->
+            <div class="col" id="wd-page-contents">
+                <div class="container-fluid">
+                    <div class="row" id="wd-page-header">
+                        <div class="col">
+                            <div class="d-flex">
+                                <span><i class="fas fa-bars"></i></span>
+                                <nav aria-label="breadcrumb" >
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item wd-page-title color-red">CS4550.12631.202410 </li>
+                                        <li class="breadcrumb-item" aria-current="page wd-page-title-med">Home</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <hr class="my-0"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col sticky-top" id="wd-sub-nav">
+                            <ul id="wd-sub-nav-list">
+                                <li class="active"><a href = "home.html">
+                                    <div class="wd-sub-item">Home</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Modules</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Piazza</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Zoom Meetings</div></a>
+                                </li>
+                                <li><a href = "assignments/index.html">
+                                    <div class="wd-sub-item">Assignments</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Quizzes</div></a>
+                                </li>
+                                <li><a href = "grades.html">
+                                    <div class="wd-sub-item">Grades</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">People</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Panopto Video</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Discussions</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Announcements</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Pages</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Files</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Rubrics</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Outcomes</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Collaborations</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Syllabus</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Settings</div></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex justify-content-end w-100">
+                                <button type="button">Collapse All</button>
+                                <button type="button">View Progress</button>
+                                <select id="home-select-publish">
+                                    <option value="PUBLISHALL">Publish All</option>
+                                </select>
+                                <button type="button">Module</button>
+                            </div>
+                            <div class="card wd-module">
+                                <div class="card-header">Week 0 - INTRO</div>
+                                <ul class="list-group px-0 border-0 rounded">
+                                    <li class="list-group-item px-0 border-0 border-bottom rounded-0">
+                                            <h3 class="wd-module-subhead">LEARNING OBJECTIVES</h3>
+                                            <ul class="list-group w-100 px-0 border-0 wd-indent-module">
+                                                <li class="list-group-item border-0 border-top rounded-0">Introduction to the course</li>
+                                                <li class="list-group-item border-0 border-top rounded-0">Learn what is Web Development</li>
+                                                <li class="list-group-item border-0 border-top rounded-0">Creating a development environment</li>
+                                                <li class="list-group-item border-0 border-top rounded-0">Creating a Web Application</li>
+                                                <li class="list-group-item border-0 border-top rounded-0">Getting started with the 1st assignment</li>
+                                            </ul>
+                                    </li>
+
+                                    <li class="list-group-item px-0 border-0 border-bottom rounded-0">
+                                            <h3 class="wd-module-subhead">READING</h3>
+                                            <ul class="list-group w-100 px-0 border-0 wd-indent-module">
+                                                <li class="list-group-item border-0 border-top rounded-0">Full Stack Developer - Chapter 1 - Introduction</li>
+                                                <li class="list-group-item border-0 border-top rounded-0">Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
+                                            </ul>
+                                    </li>
+
+                                    <li class="list-group-item px-0 border-0  rounded">
+                                            <h3 class="wd-module-subhead">SLIDES</h3>
+                                            <ul class="list-group w-100 px-0 border-0 wd-indent-module">
+                                                <li class="list-group-item border-0 border-top rounded-0"><a href="#">Introduction to Web Development <i class="fas fa-external-link-alt"></i></a></li>
+                                                <li class="list-group-item border-0 border-top rounded-0"><a href="#">Creating an HTTP server with Node.js <i class="fas fa-external-link-alt"></i></a></li>
+                                                <li class="list-group-item border-0 border-top rounded-0"><a href="#">Creating a React Application <i class="fas fa-external-link-alt"></i></a></li>
+                                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="card wd-module">
+                                <div class="card-header">Week 1 - HTML</div>
+                                <ul class="list-group px-0 border-0 rounded">
+                                    <li class="list-group-item px-0 border-0 border-bottom rounded-0">
+                                            <h3 class="wd-module-subhead">LEARNING OBJECTIVES</h3>
+                                            <ul class="list-group w-100 px-0 border-0 wd-indent-module">
+                                                <li class="list-group-item border-0 border-top rounded-0">Learn how to create user interfaces with HTML</li>
+                                                <li class="list-group-item border-0 border-top rounded-0">Keep working on assignment 1</li>
+                                                <li class="list-group-item border-0 border-top rounded-0">Deploy the assignment to Netlify</li>
+                                            </ul>
+                                    </li>
+
+                                    <li class="list-group-item px-0 border-0 border-bottom rounded-0">
+                                            <h3 class="wd-module-subhead">READING</h3>
+                                            <ul class="list-group w-100 px-0 border-0 wd-indent-module">
+                                                <li class="list-group-item border-0 border-top rounded-0">Full Stack Developer - Chapter 1 - Introduction</li>
+                                                <li class="list-group-item border-0 border-top rounded-0">Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
+                                            </ul>
+                                    </li>
+
+                                    <li class="list-group-item px-0 border-0 rounded">
+                                            <h3 class="wd-module-subhead">SLIDES</h3>
+                                            <ul class="list-group w-100 px-0 border-0 wd-indent-module">
+                                                <li class="list-group-item border-0 border-top rounded-0"><a href="#">Introduction to HTML and the DOM <i class="fas fa-external-link-alt"></i></a></li>
+                                                <li class="list-group-item border-0 border-top rounded-0"><a href="#">Formatting Web content with Headings and Paragraphs <i class="fas fa-external-link-alt"></i></a></li>
+                                                <li class="list-group-item border-0 border-top rounded-0"><a href="#">Formatting content with Lists and Tables <i class="fas fa-external-link-alt"></i></a></li>
+                                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                     </div>
                 </div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
 
-                <ul>
-                    <li>Week 0 - INTRO
-                        <ul>
-                            <li>LEARNING OBJECTIVES
-                                <ul>
-                                    <li>Introduction to the course</li>
-                                    <li>Learn what is Web Development</li>
-                                    <li>Creating a development environment</li>
-                                    <li>Creating a Web Application</li>
-                                    <li>Getting started with the 1st assignment</li>
-                                </ul>
-                            </li>
 
-                            <li>READING
-                                <ul>
-                                    <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                    <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                                </ul>
-                            </li>
+            
+                
 
-                            <li>SLIDES
-                                <ul>
-                                    <li><a href="#">Introduction to Web Development Links to an external site</a></li>
-                                    <li><a href="#">Creating an HTTP server with Node.js Links to an external site</a></li>
-                                    <li><a href="#">Creating a React Application Links to an external site</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                
+           
 
-                    <li>Week 1 - HTML
-                        <ul>
-                            <li>LEARNING OBJECTIVES
-                                <ul>
-                                    <li>Learn how to create user interfaces with HTML</li>
-                                    <li>Keep working on assignment 1</li>
-                                    <li>Deploy the assignment to Netlify</li>
-                                </ul>
-                            </li>
-
-                            <li>READING
-                                <ul>
-                                    <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                    <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </td>
-
-            <td valign="top">
-                <!-- Status -->
-                <h2>Course Status</h2>
+           
+                <!-- <h2>Course Status</h2>
                 <div>
                     <button type="button">Unpublish</button>
                     <button type="button">Publish</button>
@@ -132,11 +312,5 @@
                     <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
                     <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
                     <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
-                </ul>
-            </td>
-        </tr>
-    </table>
-
-
-</body>
-</html>
+                </ul> -->
+           

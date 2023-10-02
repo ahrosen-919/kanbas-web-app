@@ -151,7 +151,7 @@
 
 #wd-page-header {
     min-height: 40px;
-    padding-top: 15px;
+    padding: 15px 0;
 }
 
 .wd-page-title-med {
@@ -162,12 +162,13 @@
     font-size: 20pt;
 }
 
-.wd-page-title-red {
-    color: rgb(202,25,42);
+#wd-page-header hr {
+    margin: 15px 0 0 0;
+    color:gray;
 }
 
-#wd-page-header hr {
-    margin: 15px 0;
+.wd-dash-subhead hr {
+    margin: 15px 0 0 0;
     color:gray;
 }
 
@@ -210,9 +211,14 @@
     font-size: 11pt;
 }
 
-.wd-paragraph>a {
+.wd-paragraph>a, .list-group-item>a {
     color:rgb(202,25,42);
     text-decoration: none;
+}
+
+.list-group-item>a>i {
+    font-size:9pt;
+    margin-left:5px;
 }
 
 .wd-paragraph>.fa-link {
@@ -260,31 +266,108 @@
     width:100%;
     align-items: center;
     margin-bottom: 5px;
+    height:fit-content;
 }
 
-.wd-link-title-col, .wd-link-url-col {
-    display:flex;
-    flex-direction: column;
-}
-
-.wd-inline-link {
-    display:flex;
-    align-items: center;
-}
-
-.wd-inline-link i {
-    margin: 0 10px;
-}
-
-.wd-inline-link .fa-times {
+.color-red {
     color:rgb(202,25,42);
 }
 
-.wd-edit-prof-buttons {
-    display: flex;
-    justify-content: center;
+.wd-dash-subhead {
+    margin-left: 20px;
 }
 
-.wd-edit-prof-buttons>.btn {
-    margin:0 10px;
+.wd-side-margin-10 {
+    margin: 0 10px;
+}
+
+.wd-dash-card {
+    width: 260px;
+    margin: 20px;
+    padding:0;
+}
+
+.wd-dash-subhead .cards {
+    max-width: 1300px;
+}
+
+.wd-card-box {
+    width: 260px;
+    height: 120px;
+    margin:0;
+    padding:0;
+}
+
+.wd-color-bg-teal {
+    background-color:teal
+}
+
+.wd-color-teal {
+    color:teal
+}
+
+.wd-color-bg-navy {
+    background-color:navy
+}
+
+.wd-color-navy {
+    color:navy
+}
+
+.wd-color-bg-gray {
+    background-color:lightgray
+}
+
+.wd-color-gray {
+    color:gray
+}
+
+.wd-dash-card .card-title{
+    font-size: 11pt;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+
+.wd-dash-card .card-text {
+    font-size: 11pt;
+    font-weight:400;
+    margin:0px;
+}
+
+.wd-dash-card .card-text>.fas {
+    font-size: 9pt;
+    margin:5px 0px;
+}
+
+.cards {
+    margin-top: 20px;
+}
+
+.card>a {
+    text-decoration:none;
+    color:black;
+}
+
+.card>a:hover {
+    text-decoration:underline;
+    color:black;
+}
+
+#wd-page-header nav {
+   --bs-breadcrumb-divider: '>';
+   width:fit-content; 
+}
+
+.wd-module-subhead {
+    padding-left: 16px;
+    font-size: 13pt;
+    font-weight:500 ;
+}
+
+.wd-indent-module>li {
+    padding-left: 32px;
+}
+
+.wd-module {
+    margin:40px 0;
 }
