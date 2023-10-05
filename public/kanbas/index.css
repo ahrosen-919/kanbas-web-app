@@ -270,6 +270,10 @@
     color:rgb(202,25,42);
 }
 
+.wd-bg-color-red {
+    background-color: rgb(202,25,42);
+}
+
 
 .wd-side-margin-10 {
     margin: 0 10px;
@@ -537,4 +541,13 @@ font-size: 12pt;
 
 #wd-sub-nav-list-small {
     padding: 20px;
+}
+
+.wd-width-80 {
+    width:80px;
+}
+
+.wd-size-24 {
+    width: 24px;
+    height: 24px;
 }

@@ -1,10 +1,14 @@
+<!--TO DO:
+    - finish fourth column content
+    - add x to close hamburger menus in small version-->
+
 <!DOCTYPE html>
-<!-- Grades page of Kanbas -->
+<!-- Grade page of Kanbas -->
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Grades</title>
-    <!-- Link Stylesheet -->
+   <!-- Link Stylesheet -->
     <link href="index.css" rel="stylesheet"/>
 
     <!-- Bootstrap CDN -->
@@ -12,6 +16,22 @@
 
     <!-- Local dependency version: -->
     <!-- <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/> -->
+
+    <!-- Scripts to allow dropdowns -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
+integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
+integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="../vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/bootstrap/js/bootstrap.js"></script> -->
 
     <!-- Fontawesome CDN-->
     <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
@@ -22,8 +42,191 @@
 <body>
     <div class = "container-fluid">
         <!-- Global Navigation -->
+        <div class="row d-lg-none d-xl-none d-md-block w-100">
+            <div class="col p-0 ">
+                <div class="container-fluid wd-bg-black m-0 d-flex align-items-center justify-content-between">
+                    <span class="navbar-toggler border-0 float-start" 
+                        type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarToggleExternalContent" 
+                        aria-controls="navbarToggleExternalContent" aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-bars wd-nav-hamburger"></i>
+                    </span>
+
+                    <div class="d-flex flex-column justify-content-center wd-mt-4 wd-mb-4">
+                        <span class="text-center">CS4550.12631.202410</span>
+                        <span class="text-center">Home</span>
+                    </div>
+
+                    <div  class="float-end">
+                        <span type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#courseNavToggleExternalContent" 
+                        aria-controls="courseNavToggleExternalContent" aria-expanded="false" 
+                        aria-label="Toggle course navigation"><i class="fas fa-chevron-down fa-sm"></i></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row d-lg-none d-xl-none  collapse position-fixed w-100   navbar-nav-scroll"  id="navbarToggleExternalContent">
+            <div class="col" id = "wd-nav-bar-small">
+                <ul id="wd-nav-list">
+
+                    <li><a href = "profile/index.html" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                                <span class="fa-stack fa-1x" id="wd-account-icon">
+                                    <i class="far fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-user fa-stack-1x"></i>
+                                </span>
+                            </div>
+                            <div class="wd-nav-title">Account</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "dashboard.html" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span> <i class="fas fa-tachometer-alt fa-flip-horizontal fa-lg" id="wd-dashboard-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Dashboard</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "home.html" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span> <i class="fas fa-book fa-lg" id="wd-courses-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Courses</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span><i class="far fa-calendar-alt fa-lg" id="wd-calendar-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Calendar</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span><i class="fas fa-envelope-open-text fa-lg" id="wd-inbox-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Inbox</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span><i class="far fa-clock fa-lg" id="wd-history-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">History</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span> <i class="fas fa-tv fa-lg" id="wd-studio-icon"></i></span>
+                            </div>
+                            <div class="wd-nav-title">Studio</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span class="fa-stack fa-1x" id="wd-commons-icon">
+                                <i class="far fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-long-arrow-alt-right fa-stack-1x"></i>
+                            </span>
+                            </div>
+                            <div class="wd-nav-title">Commons</div>
+                        </div>
+                    </a></li>
+
+                    <li><a href = "#" class="wd-nav-item-box">
+                        <div class="wd-nav-item">
+                            <div class="wd-nav-icon">
+                               <span class="fa-stack fa-1x" id="wd-help-icon">
+                                <i class="far fa-circle fa-stack-2x" ></i>
+                                <i class="fas fa-question fa-stack-1x"></i>
+                            </span>
+                            </div>
+                            <div class="wd-nav-title">Help</div>
+                        </div>
+                    </a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row d-lg-none d-xl-none  collapse position-fixed w-100   navbar-nav-scroll"  id="courseNavToggleExternalContent">
+            <div class="col" id = "wd-nav-bar-small">
+                <ul id="wd-sub-nav-list-small">
+                                <li><a href = "home.html">
+                                    <div class="wd-sub-item">Home</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Modules</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Piazza</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Zoom Meetings</div></a>
+                                </li>
+                                <li><a href = "assignments/index.html">
+                                    <div class="wd-sub-item">Assignments</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Quizzes</div></a>
+                                </li>
+                                <li class="active"><a href = "grades.html">
+                                    <div class="wd-sub-item">Grades</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">People</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Panopto Video</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Discussions</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Announcements</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Pages</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Files</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Rubrics</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Outcomes</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Collaborations</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Syllabus</div></a>
+                                </li>
+                                <li><a href = "#">
+                                    <div class="wd-sub-item">Settings</div></a>
+                                </li>
+                            </ul>
+            </div>
+        </div>
         <div class="row">
-            <div class="col sticky-top" id = "wd-nav-bar">
+         <div class="col sticky-top d-none d-sm-none d-md-none d-lg-block" id = "wd-nav-bar">
                 <ul id="wd-nav-list">
                     <li><a href = "#" class="wd-nav-item-box">
                         <div class="wd-nav-item">
@@ -33,7 +236,7 @@
                         </div>
                     </a></li>
 
-                    <li><a href = "profile/index.html" class="wd-nav-item-box">
+                    <li><a href = "profile/index.html" class="wd-nav-item-box ">
                         <div class="wd-nav-item">
                             <div class="wd-nav-icon">
                                 <span class="fa-stack fa-1x">
@@ -129,16 +332,22 @@
             <!-- Courses Navigation -->
             <div class="col" id="wd-page-contents">
                 <div class="container-fluid">
-                    <div class="row" id="wd-page-header">
+                    <div class="row d-none d-sm-none d-md-none d-lg-block" id="wd-page-header">
                         <div class="col">
-                            <span><i class="fas fa-bars"></i></span>
-                            <span class="wd-page-title-red">CS4550.12631.202410 ></span>
-                            <span class="wd-page-title-med">Modules</span>
-                            <hr/>
+                            <div class="d-flex">
+                                <span><i class="fas fa-bars color-red"></i></span>
+                                <nav aria-label="breadcrumb" >
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item wd-page-title color-red">CS4550.12631.202410 </li>
+                                        <li class="breadcrumb-item" aria-current="page wd-page-title-med">Grades</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <hr class="my-0"/>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col sticky-top" id="wd-sub-nav">
+                    <div class="row align-items-start">
+                        <div class="col sticky-top d-none d-sm-none d-md-none d-lg-block " id="wd-sub-nav">
                             <ul id="wd-sub-nav-list">
                                 <li><a href = "home.html">
                                     <div class="wd-sub-item">Home</div></a>
@@ -195,122 +404,178 @@
                                     <div class="wd-sub-item">Settings</div></a>
                                 </li>
                             </ul>
-                        </div><div class="col">
+                        </div>
+                        <div class="col" id="wd-module-container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="float-end">
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-file-import fa-sm"></i>
+                                                Import</button>
+
+                                                
+
+                                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                                            id="wd-export-dropdown">
+                                                <i class="fas fa-file-export fa-sm"></i>
+                                                Export</button>
+                                                
+                                                <ul class="dropdown-menu" aria-labelledby="wd-export-dropdown">
+                                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                                </ul>
+                                                    
+
+                                                <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-cog fa-sm"></i></button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col col-6">
+                                        <label for="wd-search-students" class="form-label font-weight-bold wd-subheading">Student Names</label>
+                                        <form class="d-flex">
+                                            <div class="input-group mb-3" id="wd-search-students">
+                                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-search fa-sm"></i></span>
+                                                <input class="form-control" type="search" placeholder="Search Students" aria-label="Search">
+                                                <span class="input-group-text pe-0" id="basic-addon2"><i class="fas fa-chevron-down fa-sm"></i></span>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="col col-6">
+                                        <label for="wd-search-assignments" class="form-label font-weight-bold wd-subheading">Assignment Names</label>
+                                        <form class="d-flex">
+                                            <div class="input-group mb-3" id="wd-search-assignments">
+                                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-search fa-sm"></i></span>
+                                                <input class="form-control" type="search" placeholder="Search Assignments" aria-label="Search">
+                                                <span class="input-group-text pe-0" id="basic-addon2"><i class="fas fa-chevron-down fa-sm"></i></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mb-2">
+                                    <div col>
+                                        <button type="button" class="btn btn-secondary">
+                                               <i class="fas fa-filter fa-sm"></i>
+                                                Apply Filters</button>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped align-middle">
+                                                <thead class="align-middle">
+                                                    <tr>
+                                                    <th scope="col">Student Name</th>
+                                                    <th scope="col">
+                                                        <div class="d-flex flex-column justify-content-center text-center">
+                                                            <span>A1 SETUP</span>
+                                                            <span class="wd-font-10">Out of 100</span>
+                                                        </div></th>
+                                                    
+                                                    <th scope="col">
+                                                        <div class="d-flex flex-column justify-content-center text-center">
+                                                            <span>A2 HTML</span>
+                                                            <span class="wd-font-10">Out of 100</span>
+                                                        </div></th>
+
+                                                    <th scope="col">
+                                                        <div class="d-flex flex-column justify-content-center text-center">
+                                                            <span>A3 CSS</span>
+                                                            <span class="wd-font-10">Out of 100</span>
+                                                        </div></th>
+
+                                                    <th scope="col">
+                                                        <div class="d-flex flex-column justify-content-center text-center">
+                                                            <span>A4 BOOTSTRAP</span>
+                                                            <span class="wd-font-10">Out of 100</span>
+                                                        </div></th>
+
+                                                    <th scope="col">
+                                                        <div class="d-flex flex-column justify-content-center text-center">
+                                                            <span>A5 JAVASCRIPT</span>
+                                                            <span class="wd-font-10">Out of 100</span>
+                                                        </div></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                    <tr>
+                                                        <td class="text-start">Clark Kent</td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                        <td><input class="form-control-sm wd-width-80 text-center" type="text" placeholder="N/A" 
+                                                        aria-label="enter grade a3 for ck" value="97.90%" ></td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="text-start">Bruce Wayne</td>
+                                                        <td>100%</td>
+                                                        <td>97%</td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="text-start">Diana Prince</td>
+                                                        <td><input class="form-control-sm wd-width-80 text-center" type="text" placeholder="N/A" 
+                                                        aria-label="enter grade a3 for ck" value="98.75%" ></td>
+                                                        <td>100%</td>
+                                                        <td>98.64%</td>
+                                                        <td>100%</td>
+                                                        <td>99.25%</td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td class="text-start">Barry Allen</td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                        <td>95%</td>
+                                                        <td>100%</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="text-start">Arthur Curry</td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                        <td>87.60%</td>
+                                                        <td><input class="form-control-sm wd-width-80 text-center" type="text" placeholder="N/A" 
+                                                        aria-label="enter grade a3 for ck" value="" ></td>
+                                                        <td>100%</td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td class="text-start">Kara Danvers</td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                        <td>100%</td>
+                                                        <td>92%</td>
+                                                    </tr>
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>       
+    </div>  
 </body>
 </html>
-    
-
-            <!-- <td valign="top"> -->
-                <!-- Course Content -->
-                <!-- <div>
-                    <select id="grades-select-one-option">
-                        <option value="GRADEBOOK">Gradebook</option>
-                    </select>
-
-                    <button type="button">Import</button>
-
-                    <select id="grades-select-export">
-                        <option value="EXPORT">Export</option>
-                    </select>
-
-                    <button type="button">Configure</button>
-                </div>
-
-                <div>
-                    <h4>Student Names</h4>
-                    <input id="grades-text-fields-students" placeholder="Search Students"/>
-                </div>
-
-                <div>
-                    <h4>Assignment Names</h4>
-                    <input id="grades-text-fields-assignments" placeholder="Search Assignments"/>
-                </div>
-                <br/>
-                <div>
-                    <button type="button">Apply Filters</button>
-                </div>
-                <br/>
-
-                <table width="100%" border="1"> -->
-                    <!-- <thead>
-                        <tr>
-                            <th>Student Name</th>
-                            <th>
-                                A1 SETUP<br/>
-                                Out of 100
-                            </th>
-
-                            <th>
-                                A2 HTML<br/>
-                                Out of 100
-                            </th>
-
-                            <th>
-                                A3 CSS<br/>
-                                Out of 100
-                            </th>
-
-                            <th>
-                                A4 BOOTSTRAP<br/>
-                                Out of 100
-                            </th>
-
-                            <th>
-                                A5 JAVASCRIPT<br/>
-                                Out of 100
-                            </th>
-                        </tr>
-                    </thead> -->
-                    <!-- <tbody>
-                        <tr>
-                            <td>Alice Wonderland</td>
-                            <td valign="center" align="center">98</td>
-                            <td valign="center" align="center">89</td>
-                            <td valign="center" align="center"><input id = "alice-a3" placeholder="100"></td>
-                            <td valign="center" align="center">90</td>
-                            <td valign="center" align="center">92</td>
-                        </tr>
-
-                        <tr>
-                            <td>Princess Leia</td>
-                            <td valign="center" align="center">98</td>
-                            <td valign="center" align="center"><input id = "leia-a2" placeholder="100"></td>
-                            <td valign="center" align="center"><input id = "leia-a3" placeholder="100"></td>
-                            <td valign="center" align="center">96</td>
-                            <td valign="center" align="center"><input id = "leia-a5" placeholder="100"></td>
-                        </tr>
-
-                        <tr>
-                            <td valign="center">Luke Skywalker</td>
-                            <td valign="center" align="center">88</td>
-                            <td valign="center" align="center"><input id = "luke-a3" placeholder="100"></td>
-                            <td valign="center" align="center">69</td>
-                            <td valign="center" align="center">91</td>
-                            <td valign="center" align="center"><input id = "luke-a5" placeholder="100"></td>
-                        </tr>
-
-                        <tr>
-                            <td>Han Solo</td>
-                            <td valign="center" align="center"><input id = "han-a1" placeholder="100"></td>
-                            <td valign="center" align="center">89</td>
-                            <td valign="center" align="center"><input id = "han-a3" placeholder="100"></td>
-                            <td valign="center" align="center">67</td>
-                            <td valign="center" align="center">72</td>
-                        </tr>
-
-                        <tr>
-                            <td>Yoda</td>
-                            <td valign="center" align="center">98</td>
-                            <td valign="center" align="center">99</td>
-                            <td valign="center" align="center">99</td>
-                            <td valign="center" align="center">100</td>
-                            <td valign="center" align="center"><input id = "yoda-a3" placeholder="100"></td>
-                        </tr>
-                    </tbody>
-                </table> --
