@@ -26,3 +26,8 @@
     height: 30px;
     fill: rgb(202,25,42);
 }
+
+#wd-nav-neu-logo {
+    object-fit:contain;
+    max-width:60px;
+}

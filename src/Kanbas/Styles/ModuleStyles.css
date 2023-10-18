@@ -1,0 +1,27 @@
+.wd-module-subhead {
+    padding-left: 16px;
+    font-size: 13pt;
+    font-weight:500 ;
+    
+}
+
+.wd-indent {
+    padding-left: 32px;
+}
+
+.wd-module {
+    margin: 30px 0 !important;
+}
+
+.wd-module-button button {
+    margin: 0 2px;
+}
+
+.wd-border-green {
+    border:none;
+    border-left:2px solid rgb(29, 194, 65) !important;
+}
+
+.wd-color-green {
+    color: rgb(29, 194, 65);
+}

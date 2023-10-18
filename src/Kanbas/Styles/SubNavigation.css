@@ -1,0 +1,20 @@
+.wd-sub-nav-list {
+    display:flex;
+    flex-wrap:wrap;
+    width:190px;
+    flex: 0 0 190px;
+}
+
+.wd-sub-nav-list .active{
+    border-left: 2px solid black !important;
+    background-color: white !important;
+}
+
+.wd-sub-item {
+    font-size: 10pt;
+    color:rgb(202,25,42);
+}
+
+.active .wd-sub-item {
+    color:black;
+}
