@@ -1,0 +1,28 @@
+#wd-nav-bar {
+    max-width: 80px;
+    min-width: 75px;
+    height:100vh;
+    background-color: black;
+    min-height:max(100vh, 605px);
+}
+
+.wd-nav-item {
+    height: 60px;
+    padding: 5px;
+    background-color:black !important;
+    color: white!important;
+    font-size: 9pt;
+    text-decoration: none;
+    text-align: center;
+}
+
+.wd-nav-item.active {
+    background-color: white !important; 
+    color: rgb(202,25,42) !important;
+}
+
+.wd-nav-item svg {
+    width: 30px;
+    height: 30px;
+    fill: rgb(202,25,42);
+}
