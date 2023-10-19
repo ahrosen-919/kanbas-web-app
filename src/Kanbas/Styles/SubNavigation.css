@@ -1,7 +1,7 @@
 .wd-sub-nav-list {
     display:flex;
     flex-wrap:wrap;
-    width:190px;
+    width:140px;
     flex: 0 0 190px;
 }
 

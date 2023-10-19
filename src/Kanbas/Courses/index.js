@@ -36,7 +36,7 @@ function Courses() {
         <div
           className=" position-fixed bottom-0 end-0"
           style={{
-            left: "300px",
+            left: "280px",
             top: "80px",
           }}
         >

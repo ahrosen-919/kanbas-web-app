@@ -20,7 +20,7 @@ function ModuleList() {
                 
                 <div class="flex-fill flex-wrap">
                     <span class="wd-module-subhead">{module.name}</span>
-                    <p class="wd-indent">{module.description}</p>
+                    <p class="ps-4">{module.description}</p>
                 </div>
                 <div class="float-end me-2">
                     <FaEllipsisVertical/><AiOutlineCheckCircle class="wd-color-green"/>
