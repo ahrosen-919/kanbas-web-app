@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import {AiOutlineCheckCircle} from "react-icons/ai";
@@ -10,13 +10,43 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import * as client from "./client";
+import { findModulesForCourse, createModule  } from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
+    useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+    const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+
+
 
   return (
     <ul className="list-group px-0 border wd-module">
@@ -37,7 +67,7 @@ function ModuleList() {
                 <div class="float-end me-2">
                   <button className="btn btn-secondary me-1" onClick={() => dispatch(setModule(module))}>Edit</button>
 
-                  <button className="btn btn-danger" onClick={() => dispatch(deleteModule(module._id))}>Delete</button>
+                  <button className="btn btn-danger" onClick={() => handleDeleteModule(module._id)}>Delete</button>
 
                     <FaEllipsisVertical/><AiOutlineCheckCircle class="wd-color-green"/>
                 </div>
@@ -53,8 +83,8 @@ function ModuleList() {
               onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}/></p>
               
         <div className="w-100 ms-3 mb-2">
-          <button onClick={() => dispatch(addModule({ ...module, course: courseId }))} className="btn btn-light me-1">+ Add</button>
-          <button className = "btn btn-light" onClick={() => dispatch(updateModule(module))}>Update</button>
+          <button onClick={() => handleAddModule()} className="btn btn-light me-1">+ Add</button>
+          <button className = "btn btn-light" onClick={() => handleUpdateModule()}>Update</button>
 
         </div>
         </div>

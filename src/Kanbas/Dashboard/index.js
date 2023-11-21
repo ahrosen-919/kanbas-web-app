@@ -33,7 +33,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                 
                 <div className="mt-3">
                     <button className = "btn btn-light ms-4" onClick={addNewCourse}>+ Add Course</button>
-                    <button className = "btn btn-light ms-2" onClick={updateCourse} >Update</button>
+                    <button className = "btn btn-light ms-2" onClick={() => updateCourse(course)} >Update</button>
                 </div>
                 <hr class="ms-4"/>
             </div>
@@ -53,7 +53,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                                     {/* <button className = "btn btn-danger" onClick={() =>  dispatch(deleteTodo(todo.id))}> Delete </button> */}
                                     <button className = "btn btn-light mt-2" onClick={(event) => {event.preventDefault(); setCourse(course);}}>Edit</button>
 
-                                    <button className = "btn btn-danger ms-2 mt-2" onClick={(event) => { event.preventDefault(); deleteCourse(course._id); }}>Delete</button>
+                                    <button className = "btn btn-danger ms-2 mt-2" onClick={(event) => { event.preventDefault(); deleteCourse(course); }}>Delete</button>
 
                                 </div>
                             </div>
