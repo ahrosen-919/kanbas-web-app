@@ -10,12 +10,16 @@ import { useEffect, useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
+import Signin from "./users/signin";
+import Account from "./users/account";
+import UserTable from "./users/table";
+import Signup from "./users/signup";
 
 function Kanbas() {
   // const [courses, setCourses] = useState(db.courses);
   const [courses, setCourses] = useState([]);
   // const URL = "http://localhost:4000/api/courses";
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_BASE_API_URL;
   const URL = `${API_BASE}/api/courses`;
 const [course, setCourse] = useState({
     name: "New Course",      number: "New Number",
@@ -53,13 +57,13 @@ const updateCourse = async (course) => {
     // setCourse({ name: "" });
   };
 
-  const findAllCourses = async () => {
-    const response = await axios.get(URL);
-    setCourses(response.data);
-  };
-  useEffect(() => {
-    findAllCourses();
-  }, []);
+//   const findAllCourses = async () => {
+//     const response = await axios.get(URL);
+//     setCourses(response.data);
+//   };
+//   useEffect(() => {
+//     findAllCourses();
+//   }, []);
 
   // const updateCourse = () => {
   //   setCourses(
@@ -95,13 +99,17 @@ const updateCourse = async (course) => {
     <Provider store={store}>
     <div className="d-flex">
         <KanbasNavigation/>
-      <div class="w-100">
-        {/* <div class="d-lg-none d-xl-none d-md-block w-100">
-          <KanbasNavigationSmall class="w-100"/>
-        </div> */}
+      <div className="w-100">
+        <div className="d-lg-none d-xl-none d-md-block w-100">
+          <KanbasNavigationSmall className="w-100"/>
+        </div>
         <Routes>
           <Route path="/" element={<Navigate to="Dashboard" />} />
-          <Route path="Account" element={<h1 class="wd-title-large m-3">Account</h1>} />
+           <Route path="/users" element={<UserTable />} />
+           <Route path="/signin" element={<Signin />} />
+           <Route path="/signup" element={<Signup />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/account/:id" element={<Account />} />
           <Route path="Dashboard" element={
              <Dashboard
               courses={courses}

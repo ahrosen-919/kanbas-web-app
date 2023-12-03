@@ -16,7 +16,7 @@ function KanbasNavigationSmall() {
         <div className="row w-100">
             <div className="col p-0 w-100">
                 <div className="container-fluid wd-bg-black m-0 d-flex align-items-center justify-content-between">
-                    <button class="navbar-toggler border-0 float-start btn" type="button"
+                    <button className="navbar-toggler border-0 float-start btn" type="button"
                         data-toggle="collapse" data-target="#navbarToggleExternalContent" 
                         // aria-expanded="false" aria-controls="navbarToggleExternalContent"
                         >
@@ -44,7 +44,7 @@ function KanbasNavigationSmall() {
         </div>
 
         <div className="collapse position-fixed w-100  navbar-nav-scroll"  id="navbarToggleExternalContent">
-            <div id="wd-nav-bar-small" classNameName="col list-group m-0 p-0 border-0 rounded-0" style={{ width: 150 }}>
+            <div id="wd-nav-bar-small" className="col list-group m-0 p-0 border-0 rounded-0" style={{ width: 150 }}>
                 {/* <div  className="float-end me-4 mt-2">
                         <span type="button" data-bs-toggle="collapse" 
                         data-bs-target="#navbarToggleExternalContent" 
@@ -55,7 +55,7 @@ function KanbasNavigationSmall() {
                     <Link
                     key={index}
                     to={`/Kanbas/${link}`}
-                    classNameName={`list-group-item wd-nav-item border-0 m-0 p-1 ${pathname.includes(link) && "active"}`}>
+                    className={`list-group-item wd-nav-item border-0 m-0 p-1 ${pathname.includes(link) && "active"}`}>
                     {icons[index]}
                     <br/>
                     {link}
